@@ -10,7 +10,7 @@ let tasks = [
 ];
 
 app.get('/', (req, res) => {
-  res.json({ message: "Welcome from MAIN branch (lab1)" });
+  res.json({ message: "Welcome from MAIN branch " });
 });
 
 app.get('/tasks', (req, res) => {
