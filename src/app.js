@@ -4,7 +4,7 @@ app.use(express.json());
 const tasksRouter = require('./routes/tasks'); 
 
 app.get('/', (req, res) => {
-  res.json({ message: " task Manager API runnin (lab2 )" });
+  res.json({ message: " welcome from Main Branch" });
 });
 
 
