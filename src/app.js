@@ -1,12 +1,23 @@
+
 const express = require('express');
 const app = express();
 
+// Middleware to parse JSON bodies
 app.use(express.json());
-const tasksRouter = require('./routes/tasks');
-app.use('/tasks', tasksRouter);
 
+// Import tasks router
+const tasksRouter = require('./routes/tasks');
+
+// Root route
 app.get('/', (req, res) => {
-  res.json({ message: "Welcome from Feature  branch (lab2)" });
+  res.json({ message: "DevOps Task Manager API is running" });
 });
 
-app.listen(3000, () => console.log("API running on port 3000"));
+// Mount tasks router at /tasks
+app.use('/tasks', tasksRouter);
+
+// Start server
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`API running on port ${PORT}`);
+});
