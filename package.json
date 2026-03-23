@@ -2,6 +2,7 @@
   "name": "devops-task-manager",
   "version": "1.0.0",
   "main": "src/app.js",
+  "test": "exit 1",
   "scripts": {
     "start": "node src/app.js",
     "test": "echo \"No tests yet\" && exit 0" 
